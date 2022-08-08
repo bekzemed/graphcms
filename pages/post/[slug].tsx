@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 
 const PostDetails = ({ post }: any) => {
   const router = useRouter();
-  if (router.isFallback) {
+  if (router.isFallback || !post) {
     <Loader />;
   }
   return (
